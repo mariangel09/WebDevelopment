@@ -172,9 +172,38 @@ namespace MoneyBankMVC.Controllers
             Transaction transaction = MapTrasaction(account);
             
 
-            return View(account);
+            return View(transaction);
         }
+        private Account MapAccount(Transaction account)
+        {
+            Account account = new Account();
 
+            account.Id = account.Id;
+            account.AccountType= account.AccountType;
+            account.AccountNumber = account.AccountNumber;
+            account.BalanceAmount = account.BalanceAmount;
+            account.OverdraftAmount = account.OverdraftAmount;
+            account.CreationDate = account.CreationDate;
+            account.OwnerName = account.OwnerName;
+
+            return account;
+
+        }
+        private Transaction MapTrasaction(Account accountToDeposit)
+        {
+            Transaction transaction = new Transaction();
+
+            transaction.Id = accountToDeposit.Id;
+            transaction.Accountype = accountToDeposit.AccountType;
+            transaction.AccountNumber = accountToDeposit.AccountNumber;
+            transaction.BalanceAmount = accountToDeposit.BalanceAmount;
+            transaction.OverdraftAmount = accountToDeposit.OverdraftAmount;
+            transaction.CreationDate = accountToDeposit.CreationDate;
+            transaction.OwnerName = accountToDeposit.OwnerName;
+
+            return transaction;
+
+        }
 
         private bool AccountExists(int id)
         {
