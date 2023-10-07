@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using MoneyBankMVC.Context;
 
+//create builder 
 var builder = WebApplication.CreateBuilder(args);
 
 
