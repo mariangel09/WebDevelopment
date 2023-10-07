@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using MoneyBankMVC.Models;
 
 namespace MoneyBankMVC.Context
 {
@@ -13,6 +14,7 @@ namespace MoneyBankMVC.Context
         }
 
         public DbSet<Account> Accounts { get; set; }
+
     }
 }
 
